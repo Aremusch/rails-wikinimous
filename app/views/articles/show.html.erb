@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="navbar navbar-expand-lg navbar-light bg-light d-flex mb-5">
+    <%= link_to "/articles" do %>
+      <i>Wikinimous</i>
+    <% end %>
+    <%= link_to "articles/new" do %>
+      <i>New article</i>
+    <% end %>
+  </div>
+<div class="title d-flex">
+<h1><%=@article_details.title%></h1>
+<%= link_to "delete", article_path(@article),
+data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+        <%# <i class="fa-solid fa-trash-can"></i>
+      <% end %> %>
+</div>
+<p><%=@article_details.content %></p>
+</div>

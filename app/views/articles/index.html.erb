@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="navbar navbar navbar-expand-lg navbar-light bg-light mb-5 d-flex w-100">
+    <%= link_to "/articles" do %>
+      <i>Wikinimous</i>
+    <% end %>
+    <%= link_to "articles/new" do %>
+      <i>New article</i>
+    <% end %>
+  </div>
+<h1>the page works properly</h1>
+<div class="list">
+<ul>
+<% @articles.each do |article|%>
+  <li><%= link_to article.title, article_path(article) %></li>
+  <p><%= article.content %></p>
+<% end %>
+</ul>
+</div>
+</div>

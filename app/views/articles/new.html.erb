@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="navbar navbar-expand-lg navbar-light bg-light d-flex mb-5">
+    <%= link_to "/articles" do %>
+      <i>Wikinimous</i>
+    <% end %>
+    <%= link_to "articles/new" do %>
+      <i>New article</i>
+    <% end %>
+  </div>
+<%= form_with model: @article do |f| %>
+<div class="form-control">
+    <div class="form-label fs-2">
+      <%= f.label :title %>
+    </div>
+    <div class="form-control">
+      <%= f.text_field :title %>
+    </div>
+    <div class="form-label fs-2">
+      <%= f.label :content %>
+    </div>
+    <div class="form-control">
+      <%= f.text_area :details %>
+    </div>
+    <div class="button">
+      <%= f.submit %>
+    </div>
+    <% end %>
+    </div>
+</div>
